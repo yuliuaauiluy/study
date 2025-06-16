@@ -1,0 +1,52 @@
+body {
+width: 320px;
+}
+
+main {
+background-color: #F8F8F8;
+height: 509px;
+top: 88px;
+}
+
+nav {
+display: flex;
+border-width: 0px 0px 0px 0px;
+border-style: solid;
+border-color: #80949F;
+height: 88px;
+width: 320px;
+
+}
+.header-nav__logo {
+    width: 96.55px;
+    height: 50.81px;
+    top: 18.59px;
+    left: 72.73px;
+} 
+
+.header-nav__icon {
+width: 40px;
+height: 40px;
+top: 24px;
+}
+
+.header-nav__icon, .header-nav__logo {
+justify-content: space-evenly;
+align-items: center;
+
+}
+
+.header-nav__shadow {
+    width: 320px;
+    height: 1px;
+    top: 87px;
+    
+}
+
+.article-main__decorative-image {
+    width: 4px;
+    height: 40px;
+    top: 112px;
+    left: 4px;
+    
+}
