@@ -7,8 +7,18 @@ body {
     width: 320px;
 
 }
+@font-face {
+    font-family: 'TT Lakes';
+    src: url('TTLakes-Italic.eot');
+    src: local('TT Lakes Italic'), local('TTLakes-Italic'),
+        url('TTLakes-Italic.eot?#iefix') format('embedded-opentype'),
+        url('TTLakes-Italic.woff') format('woff'),
+        url('TTLakes-Italic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
 
-
+/* Шапка страницы */
 .header__nav {
     display: flex;
     border-width: 0px 0px 0px 0px;
@@ -17,7 +27,7 @@ body {
     height: 88px;
     width: 320px;
     position: relative;
-    background-color: rgba(255, 0, 0, 0.1);
+    border: 1px solid red;
 }
 .header-nav__icon, .header-nav__logo, .header-nav__divider, .header-nav__shadow {
     position: absolute;
@@ -49,18 +59,178 @@ body {
     left: 186px;
     border-radius: 1px;
 }
-
-
 .header-nav__shadow {
     width: 320px;
     height: 1px;
-    top: 87px;
-    
+    top: 87px;    
 }
 
+
+/* Основной заголовок страницы */
 main {
     background-color: #F8F8F8;
     height: 509px;
     width: 320px;
-    border: 5px solid black;
+    border: 1px solid black;
+    position: relative;
+}
+.article-main__main-div {
+    border: 3px solid yellow;
+    top: 24px;
+    width: 304px;
+    height: 40px;
+    position: absolute;
+}
+.article-main__main-heading {
+    width: 288px;
+    height: 40px;
+    top: -20px;
+    position: absolute;
+    left: 16px;
+    font-weight: 700;
+    font-size: 28px;
+    color: #1B1C21;
+}
+.article-main__decorative-image{
+    width: 4px;
+    height: 40px;
+    left: -16px;
+    top: -4px;
+    position: absolute;
+}
+
+
+/* Меню навигации */
+.article-main__nav {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    width: 504px;
+    height: 40px;
+    top: 88px;
+    left: 16px;
+    position: absolute;
+}
+.article-main__button {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+
+    display: inline-block;
+    background: white;
+    color: #7E7E82;
+    text-decoration: none;
+    position: relative;
+}
+.article-main__text {
+    display: inline-block;
+    position: absolute; 
+    top: 8px;            
+    left: 20px; 
+}
+.article-main__button--devices {
+    width: 246px;
+    height: 40px;
+    top: 0px;
+    left: 0px;
+    position: absolute;
+    border: 2px solid;
+    border-radius: 6px;
+    border-color: #B8FFEC;
+   
+     
+}
+.article-main__button--addservices {
+    position: absolute;
+    width: 258px;
+    height: 40px;
+    top: 0px;
+    left: 262px;
+    background-color: #F8F8F8;
+}
+
+/*
+.article-main__button--pricesforservices {
+    position: absolute;
+    width: 211px;
+    height: 40px;
+    top: 0px;
+    left: 272px;
+}
+.article-main__button--address {
+    position: absolute;
+    width: 211px;
+    height: 40px;
+    top: 0px;
+    left: 272px;
+}
+.article-main__button--specialprices {
+    position: absolute;
+    width: 211px;
+    height: 40px;
+    top: 0px;
+    left: 272px;
+}
+*/
+
+/* Краткая информация о компании */
+section {
+    width: 320px;
+    height: 322px;
+    top: 152px;
+    position: absolute;
+}
+.hero-section__p {
+    width: 288px;
+    height: 90px;
+    top: 0px;
+    position: absolute;
+}
+pre {
+    left: 16px;
+    position: absolute;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+}
+
+
+/* Кнопка "читать далее" */
+.hero-section__read-more-button {
+    all: unset;
+    cursor: pointer;
+}
+.hero-section__read-more-button {
+    width:  132px;
+    height: 24px;
+    top: 106px;
+    left: 16px;
+    position: absolute;
+    
+}
+.hero-section__decorative-image {
+    width:  24px;
+    height: 24px;
+    top: 0px;
+    left: 0px;
+    position: absolute;
+}
+.hero-section__read-more-text {
+    width:  100px;
+    height: 24px;
+    top: 0px;
+    left: 32px;
+    position: absolute;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+}
+
+
+/* Изображение логотипа */
+.hero-section__img-logo {
+    width:  320px;
+    height: 176px;
+    top: 146px;
+    position: absolute;
 }
