@@ -5,6 +5,8 @@ html, body {
 }
 body {
     width: 320px;
+    height: 597px;
+    font-family: 'TT Lakes', sans-serif;
 
 }
 @font-face {
@@ -90,6 +92,8 @@ main {
     font-weight: 700;
     font-size: 28px;
     color: #1B1C21;
+    line-height: 40px;
+    letter-spacing: -0.6px;
 }
 .article-main__decorative-image{
     width: 4px;
@@ -101,77 +105,112 @@ main {
 
 
 /* Меню навигации */
+
 .article-main__nav {
     display: flex;
-    flex-direction: row;
+    overflow-x: auto;
+    overflow-y: hidden;
     flex-wrap: nowrap;
-    width: 504px;
+    width: 304px;
     height: 40px;
+    padding-bottom: 10px;
     top: 88px;
     left: 16px;
+    position: relative;
+    scroll-behavior: smooth;
+}
+.article-main__img-shadow {
     position: absolute;
+    top: 0;
+    left: auto;
+    right: 0;
+    width: 24px;
+    height: 40px;
+    z-index: 10;
+    pointer-events: none;
 }
 .article-main__button {
     font-size: 16px;
     font-weight: 500;
     line-height: 24px;
+    letter-spacing: -0.2px;
 
-    display: inline-block;
-    background: white;
+    align-items: center;
+    height: 40px;
+
+    display: flex;
     color: #7E7E82;
     text-decoration: none;
     position: relative;
+
+    flex: 0 0 auto;
+    white-space: nowrap;
+}
+.article-main__nav::-webkit-scrollbar {
+      height: 6px;
+}
+
+.article-main__nav::-webkit-scrollbar-thumb {
+      background-color: #aaa;
+      border-radius: 3px;
 }
 .article-main__text {
     display: inline-block;
-    position: absolute; 
-    top: 8px;            
-    left: 20px; 
+    white-space: nowrap;
+    padding-left: 20px;
+    top: 8px;   
+    line-height: 40px;         
+    
 }
+
 .article-main__button--devices {
     width: 246px;
     height: 40px;
     top: 0px;
     left: 0px;
-    position: absolute;
+    position: relative;
     border: 2px solid;
     border-radius: 6px;
     border-color: #B8FFEC;
-   
-     
+    background: white;
 }
 .article-main__button--addservices {
-    position: absolute;
-    width: 258px;
     height: 40px;
     top: 0px;
-    left: 262px;
+    left:0px;
+    position: relative;
     background-color: #F8F8F8;
+    width: 211px;
+    
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    overflow: hidden;
 }
 
-/*
+
 .article-main__button--pricesforservices {
-    position: absolute;
+    position: relative;
     width: 211px;
     height: 40px;
     top: 0px;
-    left: 272px;
+    left: -10px;
 }
 .article-main__button--address {
-    position: absolute;
-    width: 211px;
+    position: relative;
+    width: 143px;
     height: 40px;
     top: 0px;
-    left: 272px;
+    left: -80px;
 }
 .article-main__button--specialprices {
-    position: absolute;
-    width: 211px;
+    position: relative;
+    width: 172px;
     height: 40px;
     top: 0px;
-    left: 272px;
+    left: 0px;
 }
-*/
+
 
 /* Краткая информация о компании */
 section {
@@ -187,11 +226,15 @@ section {
     position: absolute;
 }
 pre {
+    top: -10px;
     left: 16px;
     position: absolute;
     font-size: 14px;
     font-weight: 400;
     line-height: 18px;
+    font-family: 'TT Lakes', sans-serif;
+    letter-spacing: 0.2px;
+    color: #1B1C21;
 }
 
 
@@ -224,6 +267,7 @@ pre {
     font-size: 16px;
     font-weight: 500;
     line-height: 24px;
+    letter-spacing: -0.2px;
 }
 
 
