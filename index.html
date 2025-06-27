@@ -13,6 +13,24 @@
                 <img src="img/burger.png" alt="Меню" class="header-nav__icon header-nav__icon--menu">
             </a>
             <img src="img/Group.png" alt="Логотип компании" class="header-nav__logo">
+
+
+
+
+            <a href="/call" class="header-nav__link">
+                <img src="img/call.png" alt="Звонок" class="header-nav__icon header-nav__icon--call">
+            </a>
+            <a href="/chat" class="header-nav__link">
+                <img src="img/chat.png" alt="Чат" class="header-nav__icon header-nav__icon--chat">
+            </a>   
+            <a href="/profile" class="header-nav__link">
+                <img src="img/profile.png" alt="Ваш профиль" class="header-nav__icon header-nav__icon--profile">
+            </a>
+            <img src="img/divider.png" alt="" class="header-nav__divider-for-tablet">
+
+
+
+
             <img src="img/divider.png" alt="" class="header-nav__divider">
             <a href="/repair" class="header-nav__link">
                 <img src="img/repair.png" alt="Услуги" class="header-nav__icon header-nav__icon--repair">
@@ -24,6 +42,22 @@
         <img src="img/shadow.png" alt="" class="header-nav__shadow">
     </header>
     <main class="main">
+
+
+
+        <nav class="main__nav main-nav">
+            <a href="/repair" class="main-nav__link">
+                <span class="main-nav__text main-nav__text--repair"> Оставить заявку </span>
+                <img src="img/repair.png" alt="Оставить заявку" class="main-nav__icon main-nav__icon--repair">
+            </a>
+            <a href="/checkstatus" class="main-nav__link">
+                <span class="main-nav__text main-nav__text--checkstatus"> Статус ремонта </span>
+                <img src="img/checkstatus.png" alt="Статус ремонта" class="main-nav__icon main-nav__icon--checkstatus">
+            </a>
+        </nav>
+
+
+
         <article class="main__article article-main">
             <div class="article-main__main-div">
                 <h1 class="article-main__main-heading">
@@ -31,15 +65,22 @@
                 Услуги и сервисы
                 </h1>
             </div>
+            <div class="article-main__nav-mask">
                 <nav class="article-main__nav">
                     <a href="/devices" class= "article-main__button article-main__button--devices">
-                        <span class="article-main__text">
+                        <span class="article-main__text article-main__text--devices">
                             Ремонтируемые устройства
+                        </span>
+                        <span class="article-main__text article-main__text--devices-for-desktop">
+                            Ремонтируемые бренды
                         </span>
                     </a>
                     <a href="/addservices" class="article-main__button article-main__button--addservices">
                         <span class="article-main__text article-main__text--addservices">
                             Дополнительные услуги
+                        </span>
+                        <span class="article-main__text article-main__text--addservices-for-desktop">
+                            Ремонтируемые устройства
                         </span>
                     </a>
                 
@@ -58,18 +99,43 @@
                             Специальные цены
                         </span>
                     </a>
-                    <img src="img/fade copy.png" alt="" class="article-main__img-shadow">
+                    <a href="/reviews" class="article-main__button article-main__button--reviews">
+                        <span class="article-main__text article-main__text--reviews">
+                            Отзывы
+                        </span>
+                    </a>
                 </nav>
-            
+            </div>
             <section class="article-main__section-hero hero-section">
+                
                 <p class="hero-section__p">
-                    <pre>
+                    <pre class="hero-section__pre--mobile-version">
 Мы являемся авторизованным
 сервисным центром по ремонту техники
 Dell. Только у нас вы можете
 отремонтировать свой ноутбук Dell с
 официальной гарантией производителя.
-                    </pre>
+                    </pre> 
+                    <pre class="hero-section__pre--tablet-version">
+Мы являемся авторизованным сервисным 
+центром по ремонту техники Dell. Только у нас
+вы можете отремонтировать свой ноутбук
+Dell с официальной гарантией
+производителя.
+
+Мы успешно работаем с 1992 года и
+заслужили репутацию надежного партнера
+                    </pre> 
+                    <pre class="hero-section__pre--desktop-version">
+Мы являемся авторизованным сервисным центром по ремонту техники
+Dell. Только у нас вы можете отремонтировать свой ноутбук Dell с
+официальной гарантией производителя.
+
+Мы успешно работаем с 1992 года и заслужили репутацию надежного
+партнера, что подтверждает большое количество постоянных клиентов.
+Мы гордимся тем, что к нам обращаются по рекомендациям и, в свою
+очередь, советуют нас родным и близким.
+                    </pre> 
                 </p>
                 <button class="hero-section__read-more-button">
                     <img src="img/expand.png" alt=" " class="hero-section__decorative-image">
@@ -78,6 +144,7 @@ Dell. Только у нас вы можете
                 <div class="hero-section__div">
                     <img src="img/Picture-Copy.jpg" alt="Логотип CPS" class="hero-section__img-logo">
                 </div>
+                
             </section>
         </article>
     </main>

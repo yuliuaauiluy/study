@@ -4,11 +4,13 @@ html, body {
     padding: 0;
 }
 body {
-    width: 320px;
-    height: 597px;
     font-family: 'TT Lakes', sans-serif;
-
+    width: 100%;           /* ← адаптивно по ширине окна */
+    max-width: 768px;      /* ← ограничение на десктопе */
+    margin: 0 auto;        /* ← центрирование */
+    height: auto;
 }
+    
 @font-face {
     font-family: 'TT Lakes';
     src: url('TTLakes-Italic.eot');
@@ -21,6 +23,7 @@ body {
 }
 
 /* Шапка страницы */
+
 .header__nav {
     display: flex;
     border-width: 0px 0px 0px 0px;
@@ -29,7 +32,6 @@ body {
     height: 88px;
     width: 320px;
     position: relative;
-    border: 1px solid red;
 }
 .header-nav__icon, .header-nav__logo, .header-nav__divider, .header-nav__shadow {
     position: absolute;
@@ -67,27 +69,43 @@ body {
     top: 87px;    
 }
 
-
+.header-nav__icon--call {
+    display: none;
+}
+.header-nav__icon--chat {
+    display: none;
+}
+.header-nav__icon--profile {
+    display: none;
+}
+.header-nav__divider-for-tablet {
+    display: none;
+}
+a {
+    all: unset;
+    cursor: pointer;
+}
 /* Основной заголовок страницы */
+.main__nav {
+display: none;
+}
 main {
     background-color: #F8F8F8;
     height: 509px;
     width: 320px;
-    border: 1px solid black;
     position: relative;
 }
 .article-main__main-div {
-    border: 3px solid yellow;
     top: 24px;
     width: 304px;
     height: 40px;
     position: absolute;
 }
 .article-main__main-heading {
+    position: absolute;
     width: 288px;
     height: 40px;
     top: -20px;
-    position: absolute;
     left: 16px;
     font-weight: 700;
     font-size: 28px;
@@ -99,7 +117,7 @@ main {
     width: 4px;
     height: 40px;
     left: -16px;
-    top: -4px;
+    top: 0px;
     position: absolute;
 }
 
@@ -108,66 +126,55 @@ main {
 
 .article-main__nav {
     display: flex;
-    overflow-x: auto;
-    overflow-y: hidden;
     flex-wrap: nowrap;
+}
+.article-main__nav-mask {
+    padding-bottom: 20px;
     width: 304px;
     height: 40px;
-    padding-bottom: 10px;
     top: 88px;
     left: 16px;
     position: relative;
-    scroll-behavior: smooth;
-}
-.article-main__img-shadow {
-    position: absolute;
-    top: 0;
-    left: auto;
-    right: 0;
-    width: 24px;
-    height: 40px;
-    z-index: 10;
-    pointer-events: none;
+    overflow-x:auto;
+    overflow-y: hidden;
+
+  /* Затухание справа */
+    -webkit-mask-image: linear-gradient(to right, black 85%, transparent);
+    mask-image: linear-gradient(to right, black 85%, transparent);
+
+    -webkit-mask-size: 100% 100%;
+    mask-size: 100% 100%;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
 }
 .article-main__button {
     font-size: 16px;
     font-weight: 500;
     line-height: 24px;
     letter-spacing: -0.2px;
-
-    align-items: center;
     height: 40px;
+    white-space: nowrap;
 
-    display: flex;
     color: #7E7E82;
     text-decoration: none;
     position: relative;
 
-    flex: 0 0 auto;
-    white-space: nowrap;
-}
-.article-main__nav::-webkit-scrollbar {
-      height: 6px;
-}
-
-.article-main__nav::-webkit-scrollbar-thumb {
-      background-color: #aaa;
-      border-radius: 3px;
+    display: flex;
+    
+    align-items: center;
+    justify-content: center;
 }
 .article-main__text {
-    display: inline-block;
-    white-space: nowrap;
-    padding-left: 20px;
-    top: 8px;   
-    line-height: 40px;         
-    
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 16.54px;
+    padding-right: 9.3px;
+    text-align: center;
+    line-height: 40px;     
+      
 }
-
 .article-main__button--devices {
     width: 246px;
-    height: 40px;
-    top: 0px;
-    left: 0px;
     position: relative;
     border: 2px solid;
     border-radius: 6px;
@@ -175,44 +182,36 @@ main {
     background: white;
 }
 .article-main__button--addservices {
-    height: 40px;
-    top: 0px;
-    left:0px;
     position: relative;
-    background-color: #F8F8F8;
-    width: 211px;
-    
-    display: flex;
-    align-items: center;
-    white-space: nowrap;
-    overflow: hidden;
+    width: 258px;
+    left: 0px;
 }
-
-
 .article-main__button--pricesforservices {
     position: relative;
     width: 211px;
-    height: 40px;
-    top: 0px;
-    left: -10px;
+    left: 0px;
 }
 .article-main__button--address {
     position: relative;
-    width: 143px;
-    height: 40px;
-    top: 0px;
-    left: -80px;
+    width: 233px;
+    left: 0px;
 }
 .article-main__button--specialprices {
     position: relative;
     width: 172px;
-    height: 40px;
-    top: 0px;
-    left: 0px;
 }
 
-
+.article-main__text--devices-for-desktop {
+    display: none;
+}
+.article-main__text--addservices-for-desktop {
+    display: none;
+}
+.article-main__button--reviews {
+    display: none;
+}
 /* Краткая информация о компании */
+
 section {
     width: 320px;
     height: 322px;
@@ -222,10 +221,9 @@ section {
 .hero-section__p {
     width: 288px;
     height: 90px;
-    top: 0px;
     position: absolute;
 }
-pre {
+ .hero-section__pre--mobile-version {
     top: -10px;
     left: 16px;
     position: absolute;
@@ -236,9 +234,15 @@ pre {
     letter-spacing: 0.2px;
     color: #1B1C21;
 }
-
+.hero-section__pre--tablet-version {
+    display: none;
+}
+.hero-section__pre--desktop-version {
+    display: none;
+}
 
 /* Кнопка "читать далее" */
+
 .hero-section__read-more-button {
     all: unset;
     cursor: pointer;
@@ -249,13 +253,11 @@ pre {
     top: 106px;
     left: 16px;
     position: absolute;
-    
 }
 .hero-section__decorative-image {
     width:  24px;
     height: 24px;
     top: 0px;
-    left: 0px;
     position: absolute;
 }
 .hero-section__read-more-text {
@@ -272,9 +274,397 @@ pre {
 
 
 /* Изображение логотипа */
+
 .hero-section__img-logo {
     width:  320px;
     height: 176px;
     top: 146px;
     position: absolute;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* Размер экрана: 768px (min)*/
+
+@media (min-width: 768px) {
+.header__nav {
+    width: 768px;
+}
+.header-nav__icon--menu {
+    left: 24px;
+}
+.header-nav__icon--repair {
+    left: 648px;
+}
+.header-nav__icon--checkstatus {
+    left: 704px;
+}
+.header-nav__logo {
+    left: 106.73px;
+} 
+.header-nav__divider {
+    left: 84px;
+}
+.header-nav__shadow {
+    width: 768px; 
+}
+.header-nav__icon--call {
+    display: block;
+    left: 454px;
+    position: absolute;
+}
+.header-nav__icon--chat {
+    display: block;
+    left: 510px;
+    position: absolute;
+}
+.header-nav__icon--profile {
+    display: block;
+    left: 566px;
+    position: absolute;
+}
+.header-nav__divider-for-tablet {
+    display: block;
+    width: 2px;
+    height: 32px;
+    top: 28px;
+    left: 626px;
+    border-radius: 1px;
+    position: absolute;
+}
+/* Основной заголовок страницы */
+
+main {
+    height: 416px;
+    width: 769px;
+    position: relative;
+}
+.article-main__main-div {
+    width: 257px;
+}
+.article-main__main-heading {
+    width: 233px;
+    left: 24px;
+    white-space: nowrap;
+}
+.article-main__decorative-image{
+    left: -24px;
+    top: -4px;
+}
+
+
+/* Меню навигации */
+
+.article-main__nav-mask {
+    width: 776px; 
+    left: 24px;
+    padding-bottom: 10px;
+    top: 96px;
+    position: absolute;
+
+  /* Затухание справа */
+    -webkit-mask-image: none;
+    mask-image: none;
+}
+
+.article-main__button--devices {
+    width: 248px;
+}
+.article-main__button--addservices {
+    width: 211px;
+}
+.article-main__button--pricesforservices {
+    position: relative;
+    width: 143px;
+    left: -17px;
+}
+.article-main__button--address {
+   display: none;
+}
+.article-main__button--specialprices {
+    position: relative;
+    width: 172px;
+    left: -28px;
+}
+
+/* Краткая информация о компании */
+
+section {
+    width: 720px;
+    height: 208px;
+    top: 168px; 
+    left: 24px;
+    position: absolute;
+}
+.hero-section__p {
+    width: 312px;
+    height: 160px;
+    position: absolute;
+}
+.hero-section__pre--mobile-version {
+    display: none;
+}
+
+.hero-section__pre--tablet-version {
+    display: block;
+    top: -10px;
+    position: absolute;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    font-family: 'TT Lakes', sans-serif;
+    letter-spacing: 0.2px;
+    color: #1B1C21;
+}
+
+/* Кнопка "читать далее" */
+.hero-section__read-more-button {
+    top: 170px;
+    left: 0px;
+    position: absolute;
+}
+.hero-section__decorative-image {
+    left: 0px;
+    top: 0px;
+    position: absolute;
+}
+.hero-section__read-more-text {
+    width: 312px;
+    height: 160px;
+    top: 0px;
+    left: 33px;
+    position: absolute;
+}
+
+
+/* Изображение логотипа */
+
+.hero-section__img-logo {
+    width:  360px;
+    height: 208px;
+    top: 0px;
+    left: 360px;
+    position: absolute;
+    border-radius: 6px;
+}
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Размер экрана: 1120px (min)*/
+
+@media (min-width: 1120px) {
+
+header {
+    display: none;
+}
+/* Основной заголовок страницы */
+.main__nav {
+    display: flex;
+    height: 130px;
+    width: 1096px;
+    top: 42px;
+    position: absolute;
+}
+.main-nav__icon--repair {
+    left: 849px;
+    position: absolute;
+}
+.main-nav__text--repair {
+    position: absolute;
+    width: 125px;
+    height: 24px;
+    top: 10px;
+    left: 716px;
+    text-decoration: none;
+}
+.main-nav__icon--checkstatus {
+    left: 1049px;
+    position: absolute;
+}
+.main-nav__text--checkstatus {
+    position: absolute;
+    width: 119px;
+    height: 24px;
+    top: 10px;
+    left: 921px;
+    text-decoration: none;
+}
+main {
+    height: 535px;
+    width: 1120px;
+    position: relative;
+}
+.article-main__main-div {
+    width: 266px;
+    top: 42px;
+    position: absolute;
+}
+.article-main__main-heading {
+    position: absolute;
+    width: 233px;
+    left: 32px;
+}
+.article-main__decorative-image{
+    width: 3px;
+    left: -32px;
+}
+
+
+/* Меню навигации */
+
+.article-main__nav-mask {
+    width: 1063px; 
+    height: 82px;
+    left: 0px;
+    padding-bottom: 10px;
+    top: 90px;
+    position: absolute;
+    overflow-x:hidden ;
+
+  /* Затухание справа */
+    -webkit-mask-image: none;
+    mask-image: none;
+}
+
+.article-main__button--devices {
+    position: absolute;
+    width: 233px;
+    left: 33px;
+}
+.article-main__button--addservices {
+    position: absolute;
+    width: 254px;
+    left: 266px;
+    
+}
+.article-main__button--pricesforservices {
+    position: absolute;
+    width: 152px;
+    left: 520px;
+}
+.article-main__button--address {
+    position: absolute;
+    display: inline-block;
+    width: 233px;
+    left: 675px;
+}
+.article-main__button--specialprices {
+    position: absolute;
+    width: 191px;
+    left: 890px;
+}
+.article-main__button--reviews {
+    display:inline-block;
+    position: absolute;
+    width: 95px;
+    height: 40px;
+    top: 41.63px;
+    left: 30px;
+   
+}
+.article-main__text--reviews {
+    position: absolute;
+    width: 71px;
+    height: 24px;
+    top: 0px;
+    left: 0px;
+}
+.article-main__text--devices-for-desktop {
+    display: inline;
+}
+.article-main__text--addservices-for-desktop {
+    display: inline;
+}
+.article-main__text--devices {
+    display: none;
+}
+.article-main__text--addservices {
+    display: none;
+}
+/* Краткая информация о компании */
+
+section {
+    width: 490px;
+    height: 160px;
+    top: 188.22px; 
+    left: 35px;
+    position: absolute;
+}
+.hero-section__p {
+    width: 490px;
+    height: 160px;
+}
+.hero-section__pre--mobile-version {
+    display: none;
+}
+
+.hero-section__pre--tablet-version {
+    display: none;
+}
+.hero-section__pre--desktop-version {
+    display: block;
+    top: 0px;
+    position: absolute;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    font-family: 'TT Lakes', sans-serif;
+    letter-spacing: 0.2px;
+    color: #1B1C21;
+}
+/* Кнопка "читать далее" */
+.hero-section__read-more-button {
+    top: 185px;
+    left: 0px;
+    position: absolute;
+  
+}
+.hero-section__decorative-image {
+    left: 0px;
+    top: 0px;
+    position: absolute;
+}
+.hero-section__read-more-text {
+    width: 100px;
+    height: 24px;
+    top: 0px;
+    left: 32px;
+    position: absolute;
+}
+
+
+/* Изображение логотипа */
+
+.hero-section__img-logo {
+    width:  531.35px;
+    height: 307px;
+    top: 0px;
+    left: 526px;
+    position: absolute;
+    border-radius: 6px;
+}
+
+
 }
