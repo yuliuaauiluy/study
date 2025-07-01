@@ -445,7 +445,8 @@ section {
     top: 0px;
     left: 33px;
     position: absolute;
-    white-space: nowrap;
+    display: flex;
+    flex-wrap: nowrap;
 }
 
 
