@@ -248,6 +248,8 @@ section {
     cursor: pointer;
 }
 .hero-section__read-more-button {
+    display: flex;
+    flex-wrap: nowrap;
     width:  132px;
     height: 24px;
     top: 106px;
@@ -261,8 +263,6 @@ section {
     position: absolute;
 }
 .hero-section__read-more-text {
-    display: flex;
-
     width:  100px;
     height: 24px;
     top: 0px;
