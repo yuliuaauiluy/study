@@ -250,6 +250,8 @@ section {
 .hero-section__read-more-button {
     display: flex;
     flex-wrap: nowrap;
+    align-items: center;
+    gap: 8px; 
     width:  132px;
     height: 24px;
     top: 106px;
@@ -259,19 +261,13 @@ section {
 .hero-section__decorative-image {
     width:  24px;
     height: 24px;
-    top: 0px;
-    position: absolute;
 }
 .hero-section__read-more-text {
-    width:  100px;
-    height: 24px;
-    top: 0px;
-    left: 32px;
-    position: absolute;
     font-size: 16px;
     font-weight: 500;
     line-height: 24px;
     letter-spacing: -0.2px;
+    white-space: nowrap;
 }
 
 
