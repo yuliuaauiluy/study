@@ -248,7 +248,7 @@ section {
     cursor: pointer;
 }
 .hero-section__read-more-button {
-    width:  140px;
+    width:  132px;
     height: 24px;
     top: 106px;
     left: 16px;
@@ -261,6 +261,8 @@ section {
     position: absolute;
 }
 .hero-section__read-more-text {
+    display: flex;
+
     width:  100px;
     height: 24px;
     top: 0px;
@@ -443,6 +445,7 @@ section {
     top: 0px;
     left: 33px;
     position: absolute;
+    white-space: nowrap;
 }
 
 
